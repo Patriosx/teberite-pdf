@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensaje Recibido — Teberite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page thanks-page-body">
+    <div class="noise-overlay"></div>
+
+    <header class="site-header container">
+      <a href="index.html" class="logo-link">
+        <img src="./Logo blanco .svg" alt="Logo Teberite" class="logo" />
+      </a>
+    </header>
+
+    <main class="container thanks-content fade-in visible">
+      <div class="thanks-wrapper">
+        <div class="success-icon">✓</div>
+
+        <h1
+          class="hero__title"
+          style="font-size: clamp(2.5rem, 8vw, 6rem); margin-bottom: 1.5rem"
+        >
+          MENSAJE<br />
+          <span class="text-outline">RECIBIDO</span>
+        </h1>
+
+        <p class="hero__lead" style="margin: 0 auto 3rem auto">
+          Gracias por contactar con Teberite. Hemos recibido tu información
+          correctamente. Nuestro equipo la analizará y te responderá en las
+          próximas 24 horas.
+        </p>
+
+        <a href="index.html" class="cta-big">Volver al Inicio</a>
+      </div>
+    </main>
+
+    <footer class="minimal-footer container" style="text-align: center">
+      <div class="copyright">
+        <span>© <span id="year">2025</span> TEBERITE AGENCY.</span>
+      </div>
+    </footer>
+
+    <script>
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -700,3 +700,208 @@ section {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* CONTACT CTA */
+/* --- PÁGINA DE CONTACTO --- */
+
+.contact-page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header específico */
+.close-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+.close-btn:hover {
+  color: var(--c-accent);
+}
+.close-icon {
+  font-size: 1.2rem;
+}
+/* Ocultar texto "CERRAR" en móviles muy pequeños */
+@media (max-width: 400px) {
+  .close-text {
+    display: none;
+  }
+}
+
+/* Layout Central */
+.form-container {
+  flex: 1; /* Empuja el footer hacia abajo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px; /* Más estrecho para lectura */
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.form-header {
+  margin-bottom: 3rem;
+}
+.form-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.form-desc {
+  color: var(--c-text-muted);
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+
+/* Estilos del Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Inputs animados estilo "Floating Label" */
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333; /* Línea sutil */
+  color: var(--c-text);
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  border-radius: 0; /* Reset iOS */
+  transition: border-color 0.3s ease;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-bottom-color: var(--c-accent);
+}
+
+/* La etiqueta (Label) */
+.input-group label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  color: var(--c-text-muted);
+  font-size: 1.2rem;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+/* Animación cuando escribes o haces click */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+  top: -1.2rem;
+  font-size: 0.8rem;
+  color: var(--c-accent);
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Botón Submit */
+.btn-submit {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-submit span {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+.btn-submit:hover span {
+  transform: translateX(5px);
+}
+
+/* Minimal Footer */
+.minimal-footer {
+  padding-bottom: 2rem;
+  color: var(--c-text-muted);
+  font-size: 0.8rem;
+  border-top: none;
+}
+
+/* --- PÁGINA DE GRACIAS --- */
+
+.thanks-page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.thanks-content {
+  flex: 1; /* Ocupa todo el espacio vertical disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.thanks-wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Icono de éxito animado */
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--c-accent);
+  color: var(--c-accent);
+  border-radius: 50%;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+
+  /* Animación de entrada */
+  animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

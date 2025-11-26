@@ -189,7 +189,7 @@
           >
         </h2>
         <div class="approach-actions">
-          <a href="#contact" class="cta-big">Hablemos de estrategia</a>
+          <a href="contact.html" class="cta-big">Hablemos de estrategia</a>
         </div>
       </div>
     </section>
@@ -250,8 +250,8 @@
 
       <div class="footer-bottom">
         <div class="copyright">
-          <span>© 2025 TEBERITE AGENCY.</span>
-          <span class="location">MADRID, ES — WORLDWIDE.</span>
+          <span>© <span id="year">2025</span> TEBERITE AGENCY.</span>
+          <span class="location">GRAN CANARIA, ES — WORLDWIDE.</span>
         </div>
         <button
           class="back-to-top"
@@ -345,6 +345,12 @@
       };
 
       window.addEventListener("DOMContentLoaded", initMarquee);
+
+      // 4. Auto-update Year
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
     </script>
   </body>
 </html>

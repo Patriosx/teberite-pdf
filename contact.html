@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto — Teberite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page contact-page-body">
+    <div class="noise-overlay"></div>
+
+    <header class="site-header container">
+      <a href="index.html" class="logo-link">
+        <img src="./Logo blanco .svg" alt="Logo Teberite" class="logo" />
+      </a>
+
+      <a href="index.html" class="close-btn" aria-label="Volver al inicio">
+        <span class="close-text">CERRAR</span>
+        <span class="close-icon">✕</span>
+      </a>
+    </header>
+
+    <main class="container form-container fade-in visible">
+      <div class="form-header">
+        <h1 class="form-title">
+          HABLEMOS DE<br /><span class="text-accent">FUTURO</span>
+        </h1>
+        <p class="form-desc">
+          Cuéntanos sobre tu proyecto. Nos pondremos en contacto contigo en
+          menos de 24 horas.
+        </p>
+      </div>
+
+      <form
+        action="https://formsubmit.co/info@teberite.com"
+        method="POST"
+        class="contact-form"
+      >
+        <input
+          type="hidden"
+          name="_next"
+          value="http://tudominio.com/thanks.html"
+        />
+        <div class="input-group">
+          <input type="text" id="name" name="name" placeholder=" " required />
+          <label for="name">Tu Nombre / Empresa</label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder=" "
+              required
+            />
+            <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="tel" id="phone" name="phone" placeholder=" " />
+            <label for="phone">Teléfono (Opcional)</label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder=" "
+            required
+          ></textarea>
+          <label for="message">¿En qué podemos ayudarte?</label>
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="cta-big btn-submit">
+            Enviar Mensaje <span>→</span>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="minimal-footer container">
+      <div class="copyright">
+        <span>© <span id="year">2025</span> TEBERITE AGENCY.</span>
+      </div>
+    </footer>
+
+    <script>
+      // Actualizar año automáticamente
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
