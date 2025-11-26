@@ -12,10 +12,10 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="page --dark">
+  <body class="page">
     <div class="noise-overlay"></div>
 
-    <header class="site-header">
+    <header class="site-header container">
       <div class="logo-container">
         <img src="./Logo blanco .svg" alt="Logo Teberite" class="logo" />
       </div>
@@ -25,7 +25,7 @@
         <span class="line"></span>
       </button>
 
-      <ul class="desktop-nav" id="mobile-menu">
+      <ul class="desktop-nav">
         <li><a href="#hero">Inicio</a></li>
         <li><a href="#services">Servicios</a></li>
         <li><a href="#projects">Proyectos</a></li>
@@ -42,27 +42,37 @@
       </ul>
     </div>
 
-    <main class="hero" id="hero">
+    <main class="hero container" id="hero">
       <div class="hero__content">
         <div class="pill-badge">EST. 2025</div>
-        <h1 class="hero__title">
+        <!-- <h1 class="hero__title">
           ALINEAMOS<br /><span class="text-outline">MARCAS</span><br />FUTURAS
+        </h1> -->
+        <h1 class="hero__title">
+          <span class="hero__label">ALINEAMOS</span>
+          <span class="hero__word">MARCAS</span>
+          <span class="hero__word text-outline">NEGOCIOS</span>
+          <span class="hero__word indent-right">PERSONAS</span>
         </h1>
         <p class="hero__lead">
           Hacemos que marca, negocio y personas funcionen como un mismo sistema
           vivo que impulsa tu competitividad.
         </p>
         <div class="hero__footer">
-          <span class="scroll-indicator">SCROLL DOWN ↓</span>
+          <span
+            class="scroll-indicator"
+            style="font-size: 0.8rem; letter-spacing: 1px"
+            >SCROLL DOWN ↓</span
+          >
         </div>
       </div>
       <div class="glow-bg"></div>
     </main>
 
-    <section class="services fade-in" id="services">
+    <section class="services container fade-in" id="services">
       <div class="section-header">
         <h2 class="section-title">
-          QUÉ <span class="accent-text">HACEMOS</span>
+          QUÉ <span class="text-accent">HACEMOS</span>
         </h2>
         <p class="section-desc">
           Analizamos tu realidad, alineamos lo que importa y activamos lo que
@@ -70,11 +80,16 @@
         </p>
       </div>
 
-      <div class="bento-grid">
-        <div class="service-card large">
+      <div class="grid-system bento-layout">
+        <div class="card span-2">
           <span class="service-num">01</span>
-          <h3 class="service-card__title">BRANDING</h3>
-          <p class="service-text">Construcción integral de identidad.</p>
+          <h3 class="card__title">BRANDING</h3>
+          <p
+            class="service-text"
+            style="margin-bottom: 1.5rem; color: var(--c-text-muted)"
+          >
+            Construcción integral de identidad.
+          </p>
           <ul class="service-list">
             <li>Estrategia</li>
             <li>Naming</li>
@@ -84,9 +99,9 @@
           </ul>
         </div>
 
-        <div class="service-card">
+        <div class="card">
           <span class="service-num">02</span>
-          <h3 class="service-card__title">DIGITAL</h3>
+          <h3 class="card__title">DIGITAL</h3>
           <ul class="service-list">
             <li>UI/UX Design</li>
             <li>Desarrollo Web</li>
@@ -94,9 +109,9 @@
           </ul>
         </div>
 
-        <div class="service-card dark-accent">
+        <div class="card">
           <span class="service-num">03</span>
-          <h3 class="service-card__title">CULTURA</h3>
+          <h3 class="card__title">CULTURA</h3>
           <ul class="service-list">
             <li>Employer Branding</li>
             <li>Consultoría</li>
@@ -106,75 +121,70 @@
     </section>
 
     <div class="marquee-wrapper">
-      <div class="marquee">
-        <div class="marquee-content" id="marqueeContent">
-          <span
-            >ESTRATEGIA&nbsp;—&nbsp;DISEÑO&nbsp;—&nbsp;CULTURA&nbsp;—&nbsp;FUTURO&nbsp;—&nbsp;</span
-          >
-        </div>
+      <div class="marquee-content" id="marqueeContent">
+        <span
+          >ESTRATEGIA&nbsp;—&nbsp;DISEÑO&nbsp;—&nbsp;CULTURA&nbsp;—&nbsp;FUTURO&nbsp;—&nbsp;</span
+        >
       </div>
     </div>
 
-    <section class="projects fade-in" id="projects">
+    <section class="projects container fade-in" id="projects">
       <div class="section-header">
         <h2 class="section-title">
-          CASOS DE <span class="accent-text">ÉXITO</span>
+          CASOS DE <span class="text-accent">ÉXITO</span>
         </h2>
       </div>
 
-      <div class="projects-grid">
-        <article class="project-card large-project">
-          <div class="image-wrapper">
-            <img
-              src="https://as.com/ocio/imagenes/2015/08/11/album/1439316362_055327_1439381128_album_grande.jpg"
-              alt="Proyecto NoEstamosJodidxs"
-            />
-            <div class="overlay">
-              <div class="overlay-content">
-                <h3>NoEstamosJodidxs</h3>
-                <p>Rebranding Cooperativo</p>
-                <span class="btn-arrow">Ver caso ↗</span>
-              </div>
+      <div class="grid-system">
+        <article class="project-card span-2">
+          <img
+            src="https://as.com/ocio/imagenes/2015/08/11/album/1439316362_055327_1439381128_album_grande.jpg"
+            alt="Proyecto NoEstamosJodidxs"
+          />
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h3>NoEstamosJodidxs</h3>
+              <p>Rebranding Cooperativo</p>
+              <span class="btn-arrow">Ver caso ↗</span>
             </div>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop"
-              alt="Proyecto Moda"
-            />
-            <div class="overlay">
-              <div class="overlay-content">
-                <h3>Lumina</h3>
-                <p>Identidad Visual</p>
-              </div>
+          <img
+            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop"
+            alt="Proyecto Moda"
+          />
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h3>Lumina</h3>
+              <p>Identidad Visual</p>
             </div>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1614850523060-8da1d56ae167?q=80&w=1000&auto=format&fit=crop"
-              alt="Tech Brand"
-            />
-            <div class="overlay">
-              <div class="overlay-content">
-                <h3>Nexus</h3>
-                <p>Web Experience</p>
-              </div>
+          <img
+            src="https://images.unsplash.com/photo-1614850523060-8da1d56ae167?q=80&w=1000&auto=format&fit=crop"
+            alt="Tech Brand"
+          />
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h3>Nexus</h3>
+              <p>Web Experience</p>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="approach fade-in">
-      <div class="approach-container">
-        <h2 class="approach__title">
-          TRANSFORMAMOS<br />COMPAÑÍAS DESDE<br /><span class="highlight"
+    <section class="approach container fade-in">
+      <div class="approach-content">
+        <h2
+          class="hero__title"
+          style="font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 3rem"
+        >
+          TRANSFORMAMOS<br />COMPAÑÍAS DESDE<br /><span class="text-accent"
             >DENTRO</span
           >
         </h2>
@@ -183,58 +193,101 @@
         </div>
       </div>
     </section>
+    <!--- FOOTER --->
+    <footer class="site-footer container fade-in" id="contact">
+      <div class="footer-cta">
+        <span class="footer-label">¿TIENES UN PROYECTO?</span>
+        <a href="mailto:info@teberite.com" class="big-email-link">
+          info@teberite.com <span class="arrow-icon">↗</span>
+        </a>
+      </div>
 
-    <footer class="site-footer fade-in" id="contact">
-      <div class="footer-content">
-        <div class="footer-top">
-          <h3 class="footer-cta-title">HABLEMOS</h3>
-          <a href="mailto:info@teberite.com" class="big-email"
-            >info@teberite.com</a
-          >
+      <div class="footer-divider"></div>
+
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <img
+            src="./Logo blanco .svg"
+            alt="Teberite Logo"
+            class="footer-logo"
+          />
+          <p class="footer-tagline">
+            Diseñando el sistema operativo de las marcas del futuro.
+          </p>
         </div>
-        <div class="footer-bottom">
-          <div class="copyright">© 2025 Teberite Agency.</div>
-          <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Behance</a>
-          </div>
+
+        <div class="footer-col">
+          <h4 class="col-title">SITEMAP</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h4 class="col-title">SOCIAL</h4>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Behance</a></li>
+            <li><a href="#" target="_blank">Twitter / X</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="col-title">LEGAL</h4>
+          <ul class="footer-links">
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          <span>© 2025 TEBERITE AGENCY.</span>
+          <span class="location">MADRID, ES — WORLDWIDE.</span>
+        </div>
+        <button
+          class="back-to-top"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        >
+          VOLVER ARRIBA ↑
+        </button>
       </div>
     </footer>
 
     <script>
       // 1. Hamburger Menu
       const hamburgerBtn = document.querySelector(".hamburger-btn");
-      // 'menuOverlay' is the full-screen overlay that contains the mobile menu
       const menuOverlay = document.getElementById("menuOverlay");
       const menuLinks = menuOverlay.querySelectorAll("a");
 
       const toggleMenu = () => {
         const isOpened = hamburgerBtn.classList.toggle("is-open");
-        // Toggle the overlay active class so it becomes visible on mobile
         menuOverlay.classList.toggle("active", isOpened);
         menuOverlay.setAttribute("aria-hidden", String(!isOpened));
 
-        // Update aria-expanded state on the button
         hamburgerBtn.setAttribute("aria-expanded", String(isOpened));
         hamburgerBtn.setAttribute(
           "aria-label",
           isOpened ? "Cerrar menú de navegación" : "Abrir menú de navegación"
         );
 
-        // Prevent background scroll when menu is open
         document.body.style.overflow = isOpened ? "hidden" : "auto";
       };
 
-      // Close with Escape
       document.addEventListener("keyup", (e) => {
         if (e.key === "Escape" && menuOverlay.classList.contains("active")) {
           toggleMenu();
         }
       });
 
-      // Close when click outside menu content (overlay background)
       menuOverlay.addEventListener("click", (e) => {
         if (
           e.target === menuOverlay &&
@@ -246,7 +299,6 @@
 
       hamburgerBtn.addEventListener("click", toggleMenu);
 
-      // Close the menu when a link is clicked (on mobile)
       menuLinks.forEach((link) => {
         link.addEventListener("click", () => {
           if (
@@ -270,15 +322,15 @@
       window.addEventListener("scroll", fadeInOnScroll);
       window.addEventListener("load", fadeInOnScroll);
 
-      // 3. MARQUEE INFINITO (Script Nuevo)
+      // 3. MARQUEE INFINITO
       const initMarquee = () => {
         const marqueeContent = document.getElementById("marqueeContent");
         const originalContent = marqueeContent.innerHTML;
 
         const fillMarquee = () => {
           marqueeContent.innerHTML = originalContent;
-
-          while (marqueeContent.scrollWidth < window.innerWidth * 2.5) {
+          // Llenamos hasta que el contenido sea bastante ancho
+          while (marqueeContent.scrollWidth < window.innerWidth * 3) {
             marqueeContent.innerHTML += originalContent;
           }
         };
